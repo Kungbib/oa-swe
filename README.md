@@ -1,6 +1,6 @@
-I den här mappen finns data i form av csv-filer (i zip-format pga storleken) för den statistik som presenteras på KB:s sida [Öppen tillgång i siffror](https://www.kb.se/samverkan-och-utveckling/oppen-tillgang-och-bibsamkonsortiet/oppen-tillgang/oppen-tillgang-i-siffror.html). Data består av Swepub-data ([dump augusti 2021](https://swepub-qa.kb.se/bibliometrics/datadump)) matchat på DOI med data från [Unpaywall](https://unpaywall.org/) (insamlat via API under perioden 2021-08-17 till 2021-08-19). Data är filtrerat till publicerade sakkunniggranskade artiklar enligt Swepub. Informationen om öppen tillgång (KB:s variabler i nyckeln nedan) är beräknade genom Unpaywall-data, se varje variabel för detaljer.
+I den här mappen finns data i form av csv-filer (i zip-format pga storleken) för den statistik som presenteras på KB:s sida [Öppen tillgång i siffror](https://www.kb.se/samverkan-och-utveckling/oppen-tillgang-och-bibsamkonsortiet/oppen-tillgang/oppen-tillgang-i-siffror.html). Data består av Swepub-data ([dump juli 2022](https://swepub-qa.kb.se/bibliometrics/datadump)) matchat på DOI med data från [Unpaywall](https://unpaywall.org/) (insamlat via API under perioden 2022-07-08 till 2022-07-10). Data är filtrerat till publicerade sakkunniggranskade artiklar enligt Swepub. Informationen om öppen tillgång (KB:s variabler i nyckeln nedan) är beräknade genom Unpaywall-data, se varje variabel för detaljer. Tidigare års data finns i respektive mapp.
 
-Det finns en totalfil var för publiceringsåren 2017 till 2020 (oa_2021_results_xxxx.zip), samt ytterligare två filer för publiceringsår 2020 fördelat på lärosäten (oa_2021_results_orgs_2020.zip) och forskningsämnen på 1-siffernivå enligt [Standard för svensk indelning av forskningsämnen](https://www.scb.se/dokumentation/klassifikationer-och-standarder/standard-for-svensk-indelning-av-forskningsamnen/) (oa_2021_results_subj_2020.zip).
+Det finns en totalfil var för publiceringsåren 2017 till 2021 (oa_2022_results_xxxx.zip), samt ytterligare två filer för publiceringsår 2021 fördelat på lärosäten (oa_2022_results_orgs_2021.zip) och forskningsämnen på 1-siffernivå enligt [Standard för svensk indelning av forskningsämnen](https://www.scb.se/dokumentation/klassifikationer-och-standarder/standard-for-svensk-indelning-av-forskningsamnen/) (oa_2022_results_subj_2021.zip).
 
 Observera att filerna är konstruerade så att om flera organisationer som levererar data till Swepub levererat samma artikel och artikeln inte fångats upp i dedupliceringsprocessen blir det en ny rad för varje levererande lärosäte (gäller årsfilerna). Därtill blir det en rad för varje typ av öppen tillgång som Unpaywall identifierat (gäller alla filer). De två filerna med lärosäten respektive forskningsämnen är uppbyggda så att om en artikel är affilierad (observera - inte levererad utan affilierad) till flera organisationer finns en rad per organisation och typ av öppen tillgång via Unpaywall. Motsvarande gäller för forskningsämnena, om en artikel är klassificerad till flera forskningsämnen finns en rad per forskningsämne och typ av öppen tillgång via Unpaywall. I dessa båda filer finns även DOI:er som inte matchats i Unpaywall, dessa rader har NA angivet för Unpaywall-data. En artikel förekommer alltså på flera rader, med unik information för varje rad.
 
@@ -22,6 +22,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 *deliver_org (Swepub)*: organisationskod för den organisation som levererat data.<br>
 *doi (Unpaywall/Swepub)*: DOI:er i Swepubs dump är inte alltid angivna i korrekt format beroende på hur lärosätena registrerat dem. Unpaywalls API hanterar vissa formatfel, exv versaler/gemener men är DOI felaktig blir det ingen träff.<br>
 *embargo (Swepub)*:  end för 2019 och 2020. Om det finns information om embargo från levererande organisation finns den angiven här.<br>
+*endpoint.id (Unpaywall)*: Unpaywalls id.<br>
 *evidence (Unpaywall)*: hur den öppet tillgängliga artikeln har hittats.<br>
 *host_type (Unpaywall)*: vilken typ av värd, förlag eller repositorium, som står bakom artikelversionen.<br>
 *hybrid (KB)*: hybridartikel enl KB:s kriterier, beräknad via Unpaywall-data enligt följande: journal_is_in_doaj = FALSE och host_type = publisher och licensen är en CC-BY-variant.<br>
@@ -29,7 +30,9 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 *is_oa (Unpaywall)*: finns öppet tillgänglig version enligt Unpaywalls kriterier.<br>
 *journal_is_in_doaj (Unpaywall)*: är artikeln publicerad i en DOAJ-indexerad tidskrift.<br>
 *license (Unpaywall)*: licensieringen för den här versionen.<br>
+*licencing (KB)*: licensiering enligt post i Swepub.<br>
 *nr_publs (Swepub)*: anger hur många levererade poster som bygger upp den sammanslagna posten, deduplicerade posten i Swepub. Dedupliceringsprocessen i Swepub är under utveckling.<br>
+*nr_of_contr (KB)*: kontrollsiffra för att kontrollera Swepubs dedupliceringsprocess.<br>
 *nr_uka1 (KB)*: hur många forskningsämnen på 1-siffernivå som artikeln har angivet.<br>
 *oa (Swepub)*: information om öppen tillgång enligt levererande organisationer. Beroende på lokalt system kan möjligheten att leverera den här typen av information variera mellan organisationerna.<br>
 *oa_date (Unpaywall)*: det datum artikeln först blev tillgänglig via den här platsen.<br>
@@ -41,6 +44,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 *publ_language (Swepub)*: språkkod.<br>
 *publ_status (Swepub)*: publiceringsstatus, här publicerad (https://id.kb.se/term/swepub/Published).<br>
 *publ_title (Swepub)*: artikelns titel.<br>
+*publ_year (KB)*: extracted publication year from publ_date.<br>
 *publisher (Swepub)*: förlag enligt levererande organisation.<br>
 *repo (KB)*: parallellpublicerad artikel enl KB:s kriterier, beräknad via Unpaywall-data enligt följande: host_type = repository och versionen är antingen publishedVersion eller acceptedVersion.<br>
 *repository_institution (Unpaywall)*: värd för repositoriet.<br>
