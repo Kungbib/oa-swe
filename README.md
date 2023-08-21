@@ -28,7 +28,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 | *endpoint.id (Unpaywall)* | Unpaywalls id.<br> |
 | *evidence (Unpaywall)* | Hur den öppet tillgängliga artikeln har hittats.<br> |
 | *host_type (Unpaywall)* | Vilken typ av värd, förlag eller repositorium, som står bakom artikelversionen.<br> |
-| *hybrid (KB)* | Bybridartikel enl KB:s kriterier, beräknad via Unpaywall-data enligt följande: journal_is_in_doaj = FALSE och host_type = publisher och licensen är en CC-BY-variant.<br> |
+| *hybrid (KB)* | Hybridartikel enl KB:s kriterier, beräknad via Unpaywall-data enligt följande: journal_is_in_doaj = FALSE och host_type = publisher och licensen är en CC-BY-variant.<br> |
 | *is_best (Unpaywall)* | Den bästa platsen för öppen tillgång enligt Unpaywalls kriterier.<br> |
 | *is_oa (Unpaywall)* | Finns öppet tillgänglig version enligt Unpaywalls kriterier.<br> |
 | *journal_is_in_doaj (Unpaywall)* | Om artikeln finns publicerad i en DOAJ-indexerad tidskrift.<br> |
