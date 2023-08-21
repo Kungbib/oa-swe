@@ -14,7 +14,7 @@ För Unpaywall-variablerna finns mer information här: https://unpaywall.org/dat
 För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-och-utveckling/swepub/datamodell/swepub-bibframe.html<br>
 <br>
 | Variabel | Beskrivning |
-| :--- | :--------- |
+| :----- | :--------- |
 | *aff (Swepub)* | auktoriserad affiliering till upphovsperson i Swepub.<br> |
 | *all_oa (KB)* | all typ av öppen tillgång enl KB:s kriterier, dvs artikel i DOAJ-indexerad tidskrift, hybridartikel eller en publicerad eller accepterad version av artikeln i ett repositorium.<br> |
 | *change_date (Swepub)* | datum då posten ändrades i organisationskällan.<br> |
