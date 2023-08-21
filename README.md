@@ -4,7 +4,8 @@ Det finns en totalfil var för publiceringsåren 2017 till 2021 (oa_2022_results
 
 Observera att filerna är konstruerade så att om flera organisationer som levererar data till Swepub levererat samma artikel och artikeln inte fångats upp i dedupliceringsprocessen blir det en ny rad för varje levererande lärosäte (gäller årsfilerna). Därtill blir det en rad för varje typ av öppen tillgång som Unpaywall identifierat (gäller alla filer). De två filerna med lärosäten respektive forskningsämnen är uppbyggda så att om en artikel är affilierad (observera - inte levererad utan affilierad) till flera organisationer finns en rad per organisation och typ av öppen tillgång via Unpaywall. Motsvarande gäller för forskningsämnena, om en artikel är klassificerad till flera forskningsämnen finns en rad per forskningsämne och typ av öppen tillgång via Unpaywall. I dessa båda filer finns även DOI:er som inte matchats i Unpaywall, dessa rader har NA angivet för Unpaywall-data. En artikel förekommer alltså på flera rader, med unik information för varje rad.
 
-Underlag för KB:s statistik för öppen tillgång utgörs av variablerna *all_oa*, *journal_is_in_doaj*, *hybrid*, *repo* och *only_repo*.
+Underlag för KB:s statistik för öppen tillgång utgörs av variablerna <br>
+*all_oa*, *journal_is_in_doaj*, *hybrid*, *repo* och *only_repo*.
 
 **Variabelnyckel**<br>
 För alla filer i bokstavsordning.<br>
