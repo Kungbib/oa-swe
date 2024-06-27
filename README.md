@@ -1,6 +1,6 @@
-I den här mappen finns data i form av csv-filer (i zip-format pga storleken) för den statistik som presenteras på KB:s sida [Öppen tillgång i siffror](https://www.kb.se/samverkan-och-utveckling/oppen-tillgang-och-bibsamkonsortiet/oppen-tillgang/oppen-tillgang-i-siffror.html). Data består av Swepub-data ([dump juni 2023](https://bibliometri.swepub.kb.se/bibliometrics/datadump)) matchat på DOI med data från [Unpaywall](https://unpaywall.org/) (insamlat via API under perioden 2023-06-07 till 2023-06-12). Data är filtrerat till publicerade sakkunniggranskade artiklar enligt Swepub. Informationen om öppen tillgång (KB:s variabler i nyckeln nedan) är beräknade genom Unpaywall-data, se varje variabel för detaljer. Tidigare års data finns i respektive mapp.
+I den här mappen finns data i form av csv-filer (i zip-format pga storleken) för den statistik som presenteras på KB:s sida [Öppen tillgång i siffror](https://www.kb.se/samverkan-och-utveckling/oppen-tillgang-och-bibsamkonsortiet/oppen-tillgang/oppen-tillgang-i-siffror.html). Data består av Swepub-data ([dump juni 2024](https://bibliometri.swepub.kb.se/bibliometrics/datadump)) matchat på DOI med data från [Unpaywall](https://unpaywall.org/) (insamlat via API under perioden 2024-06-07 till 2023-06-14). Data är filtrerat till publicerade sakkunniggranskade artiklar enligt Swepub. Informationen om öppen tillgång (KB:s variabler i nyckeln nedan) är beräknade genom Unpaywall-data, se varje variabel för detaljer. Tidigare års data finns i respektive mapp.
 
-Det finns en totalfil var för publiceringsåren 2018 till 2022 (oa_2023_results_xxxx.zip), samt ytterligare två filer för publiceringsår 2022 fördelat på lärosäten (oa_2023_results_orgs_2022.zip) och forskningsämnen på 1-siffernivå enligt [Standard för svensk indelning av forskningsämnen](https://www.scb.se/dokumentation/klassifikationer-och-standarder/standard-for-svensk-indelning-av-forskningsamnen/) (oa_2023_results_subj_2022.zip).
+Det finns en totalfil var för publiceringsåren 2019 till 2023 (oa_2024_results_xxxx.zip), samt ytterligare två filer för publiceringsår 2023 fördelat på lärosäten (oa_2024_results_orgs_2023.zip) och forskningsämnen på 1-siffernivå enligt [Standard för svensk indelning av forskningsämnen](https://www.scb.se/dokumentation/klassifikationer-och-standarder/standard-for-svensk-indelning-av-forskningsamnen/) (oa_2024_results_subj_2023.zip).
 
 Observera att filerna är konstruerade så att om flera organisationer som levererar data till Swepub levererat samma artikel och artikeln inte fångats upp i dedupliceringsprocessen blir det en ny rad för varje levererande lärosäte (gäller årsfilerna). Därtill blir det en rad för varje typ av öppen tillgång som Unpaywall identifierat (gäller alla filer). De två filerna med lärosäten respektive forskningsämnen är uppbyggda så att om en artikel är affilierad (observera - inte levererad utan affilierad) till flera organisationer finns en rad per organisation och typ av öppen tillgång via Unpaywall. Motsvarande gäller för forskningsämnena, om en artikel är klassificerad till flera forskningsämnen finns en rad per forskningsämne och typ av öppen tillgång via Unpaywall. I dessa båda filer finns även DOI:er som inte matchats i Unpaywall, dessa rader har NA angivet för Unpaywall-data. En artikel förekommer alltså på flera rader, med unik information för varje rad.
 
@@ -16,7 +16,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 <br>
 | Variabel | Beskrivning |
 | :------ | :--------- |
-| *aff (Swepub)* | Auktoriserad affiliering till upphovsperson i Swepub.<br> |
+<!--- | *aff (Swepub)* | Auktoriserad affiliering till upphovsperson i Swepub.<br> | --->
 | *all_oa (KB)* | All typ av öppen tillgång enl KB:s kriterier, dvs artikel i DOAJ-indexerad tidskrift, hybridartikel eller en publicerad eller accepterad version av artikeln i ett repositorium.<br> |
 | *change_date (Swepub)* | Datum då posten ändrades i organisationskällan.<br> |
 | *content_type (Swepub)* | Innehållsmärkning, här refereegranskat (https://id.kb.se/term/swepub/svep/ref).<br> |
@@ -51,6 +51,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 | *publisher (Swepub)* | Förlag enligt levererande organisation.<br> |
 | *repo (KB)* | Parallellpublicerad artikel enl KB:s kriterier, beräknad via Unpaywall-data enligt följande: host_type = repository och versionen är antingen publishedVersion eller acceptedVersion.<br> |
 | *repository_institution (Unpaywall)* | Värd för repositoriet.<br> |
+| *source (Swepub)* | Organisation som registrerat publikationen, används för beräkning av andel öppen tillgång per lärosäte. <br> |
 | *swedish_list (Swepub)* | Poster med värdet https://id.kb.se/term/swepub/swedishlist/peer-reviewed är med i svenska listan.<br> |
 | *updated  (Unpaywall)* | Tidpunkt när data för den här artikeln senast uppdaterades.<br> |
 | *uka_code (Swepub)* | Forskningsämne på 1-siffernivå.<br> |
