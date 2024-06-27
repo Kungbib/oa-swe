@@ -16,7 +16,6 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 <br>
 | Variabel | Beskrivning |
 | :------ | :--------- |
-<!--- | *aff (Swepub)* | Auktoriserad affiliering till upphovsperson i Swepub.<br> | --->
 | *all_oa (KB)* | All typ av öppen tillgång enl KB:s kriterier, dvs artikel i DOAJ-indexerad tidskrift, hybridartikel eller en publicerad eller accepterad version av artikeln i ett repositorium.<br> |
 | *change_date (Swepub)* | Datum då posten ändrades i organisationskällan.<br> |
 | *content_type (Swepub)* | Innehållsmärkning, här refereegranskat (https://id.kb.se/term/swepub/svep/ref).<br> |
@@ -59,5 +58,7 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 | *url_for_landing_page (Unpaywall)* | URL för landningssidan som beskriver den öppet tillgängliga artikeln.<br> |
 | *url_for_pdf (Unpaywall)* | URL med öppet tillgänglig PDF-version av artikeln.<br> |
 | *version (Unpaywall)* | Vilken version av artikeln som finns tillgänglig.<br> |
+
+<!--- | *aff (Swepub)* | Auktoriserad affiliering till upphovsperson i Swepub.<br> | --->
 
 Har du frågor eller kommentarer? Kontakta <openaccess@kb.se>
