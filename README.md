@@ -7,6 +7,8 @@ Observera att filerna är konstruerade så att om flera organisationer som lever
 Underlag för KB:s statistik för öppen tillgång utgörs av variablerna <br>
 *all_oa*, *journal_is_in_doaj*, *hybrid*, *repo* och *only_repo*.
 
+I sammanställningen 2024 har uppgifter om vilka lärosäten som rapporterat publikationen till Swepub använts som utgångspunkt för öppen tillgång per lärosäte.
+
 **Variabelnyckel**<br>
 För alla filer i bokstavsordning.<br>
 Vissa av variablerna finns endast i vissa filer.<br>
