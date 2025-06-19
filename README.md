@@ -1,5 +1,5 @@
 
-*Data som ligger till grund för underlaget till 2025 års redovisning av öppen tillgång i siffror publiceras i augusti 2025.*
+*Data som ligger till grund för underlaget till 2025 års redovisning av öppen tillgång i siffror publiceras i augusti.*
 
 I den här mappen finns data i form av csv-filer (i zip-format pga storleken) för den statistik som presenteras på KB:s sida [Öppen tillgång i siffror](https://www.kb.se/samverkan-och-utveckling/oppen-tillgang-och-bibsamkonsortiet/oppen-tillgang/oppen-tillgang-i-siffror.html). Data består av Swepub-data ([dump juni 2024](https://bibliometri.swepub.kb.se/bibliometrics/datadump)) matchat på DOI med data från [Unpaywall](https://unpaywall.org/) (insamlat via API under perioden 2024-06-07 till 2024-06-14). Data är filtrerat till publicerade sakkunniggranskade artiklar enligt Swepub. Informationen om öppen tillgång (KB:s variabler i nyckeln nedan) är beräknade genom Unpaywall-data, se varje variabel för detaljer. Tidigare års data finns i respektive mapp.
 
