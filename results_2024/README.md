@@ -1,1 +1,1 @@
-Resultat från sammanställning 2024
+Öppen tillgång enligt sammanställning 2024
