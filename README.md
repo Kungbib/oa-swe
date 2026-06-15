@@ -69,3 +69,5 @@ För Swepub-variablerna finns mer information här: https://www.kb.se/samverkan-
 <!--- | *aff (Swepub)* | Auktoriserad affiliering till upphovsperson i Swepub.<br> | --->
 
 Har du frågor eller kommentarer? Kontakta <openaccess@kb.se>
+
+Uppdaterad 15 juni 2026.
